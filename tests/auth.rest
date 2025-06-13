@@ -1,0 +1,20 @@
+### basic /
+GET http://localhost:3000/v1/auth
+
+### Sign up
+POST http://localhost:3000/v1/auth/sign-up
+Content-Type: application/json
+
+{
+    "username": "test2",
+    "password": "test"
+}
+
+### Sign in
+POST http://localhost:3000/v1/auth/sign-in
+Content-Type: application/json
+
+{
+    "username": "test2",
+    "password": "test"
+}

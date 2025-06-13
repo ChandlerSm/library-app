@@ -1,0 +1,14 @@
+### basic /
+GET http://localhost:3000/v1/user
+
+### Get a users info
+GET http://localhost:3000/v1/user/1
+
+### Create user
+POST http://localhost:3000/v1/user
+
+### Update user
+PUT http://localhost:3000/v1/user/1
+
+### Delete user
+DELETE http://localhost:3000/v1/user/1
