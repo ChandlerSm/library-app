@@ -2,7 +2,8 @@
 GET http://localhost:3000/v1/user
 
 ### Get a users info
-GET http://localhost:3000/v1/user/1
+GET http://localhost:3000/v1/user/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyIiwiaWQiOjIsImlhdCI6MTc1MDAyOTA5MH0.DRYqs2NOTz4j2kQWik_W4z_utUQl1KA4_540D2CvBqs
 
 ### Create user
 POST http://localhost:3000/v1/user
@@ -11,4 +12,5 @@ POST http://localhost:3000/v1/user
 PUT http://localhost:3000/v1/user/1
 
 ### Delete user
-DELETE http://localhost:3000/v1/user/1
+DELETE http://localhost:3000/v1/user/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwiaWQiOjQsImlhdCI6MTc1MDAyOTk0M30.RbUB-BCicjqVAwfINQQz6yKkDi6dZslcnCsPdZ_-VQU

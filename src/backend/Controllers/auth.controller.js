@@ -67,7 +67,7 @@ export const signIn = async (req, res, next) => {
                 if (err) return res.status(401).send("Error comparing passwords");
 
                 if (isMatch) {
-                    const token = jwttoken.sign({username: user.username, id: user.id}, JWTSECRETTOKEN)
+                    const token = jwttoken.sign({username: user[0].username, id: user[0].id}, JWTSECRETTOKEN)
                     return res.status(200).json({message: "Logged in", token: token})
                 } else {
                     return res.status(404).send("Incorrect password");

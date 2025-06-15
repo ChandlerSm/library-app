@@ -6,7 +6,7 @@ POST http://localhost:3000/v1/auth/sign-up
 Content-Type: application/json
 
 {
-    "username": "test2",
+    "username": "test3",
     "password": "test"
 }
 
@@ -15,6 +15,6 @@ POST http://localhost:3000/v1/auth/sign-in
 Content-Type: application/json
 
 {
-    "username": "test2",
+    "username": "test3",
     "password": "test"
 }

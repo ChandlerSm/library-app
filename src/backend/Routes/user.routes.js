@@ -1,8 +1,8 @@
 import { Router } from "express";
-import userController from "../Controllers/user.controller.js";
+import {getUser, users, deleteUser} from "../Controllers/user.controller.js"
+import { authorization } from "../Middleware/auth.middleware.js";
 
 const userRouter = Router();
-const userControllers = new userController()
 
 // Return all users
 userRouter.get('/', (req, res) => {
@@ -11,12 +11,9 @@ userRouter.get('/', (req, res) => {
 
 // Return the data of a user
 // Parameters: ID of account to get
-userRouter.get('/:id', (req, res) => {
-    const {id} = req.params;
-    console.log(`User info of ${id}`)
-})
+userRouter.get('/:id', authorization, getUser);
 
-// Will create a new user
+// Will create a new user, more for dev purposes not user use
 userRouter.post('/', (req, res) => {
     console.log("Created a user")
 })
@@ -29,8 +26,6 @@ userRouter.put('/:id', (req, res) => {
 
 // Will delete a user
 // Parameters: ID of account to delete
-userRouter.delete('/:id', (req, res) => {
-    console.log("Deleted a user")
-})
+userRouter.delete('/:id', authorization, deleteUser);
 
 export default userRouter
