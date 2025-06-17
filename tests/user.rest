@@ -9,7 +9,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 POST http://localhost:3000/v1/user
 
 ### Update user
-PUT http://localhost:3000/v1/user/1
+PUT http://localhost:3000/v1/user/2/testupdate1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyIiwiaWQiOjIsImlhdCI6MTc1MDE0ODExM30.OwFntumqE4_BKAztgp0Xv86r5IXgCuNnlCfWVEEecQ0
 
 ### Delete user
 DELETE http://localhost:3000/v1/user/4

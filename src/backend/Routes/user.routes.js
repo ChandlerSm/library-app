@@ -1,13 +1,11 @@
 import { Router } from "express";
-import {getUser, users, deleteUser} from "../Controllers/user.controller.js"
+import {getUser, users, deleteUser, updateUser} from "../Controllers/user.controller.js"
 import { authorization } from "../Middleware/auth.middleware.js";
 
 const userRouter = Router();
 
 // Return all users
-userRouter.get('/', (req, res) => {
-    console.log("All users");
-})
+userRouter.get('/', users)
 
 // Return the data of a user
 // Parameters: ID of account to get
@@ -20,9 +18,7 @@ userRouter.post('/', (req, res) => {
 
 // Will update an account
 // Parameters: ID of account to update
-userRouter.put('/:id', (req, res) => {
-    console.log("Updated user account")
-})
+userRouter.put('/:id/:username', authorization, updateUser)
 
 // Will delete a user
 // Parameters: ID of account to delete
