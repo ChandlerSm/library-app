@@ -4,9 +4,8 @@ export const users = async (req, res, next) => {
     try {
         db.all("SELECT * FROM users", (err, row) => {
             if (err) return res.status(404).json({Message: "Error getting users."})
-            const users = []
-            users.push(row);
-            return res.status(200).json({message: "Successfully got all users.", users: users})
+
+            return res.status(200).json({message: "Successfully got all users.", users: row})
         })
     } catch (err) {
         return res.status(500).json({message: "Internal Server Error."})
