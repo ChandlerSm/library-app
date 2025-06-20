@@ -3,10 +3,6 @@ import {signIn, signUp} from "../Controllers/auth.controller.js";
 
 const authRouter = Router();
 
-authRouter.get('/', (req, res) => {
-    res.status(200).json({message: "Hello World!"})
-})
-
 // API for signing in account, will use jwtoken to return a log in token
 // Body: 
 // {

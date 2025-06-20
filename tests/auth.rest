@@ -1,6 +1,3 @@
-### basic /
-GET http://localhost:3000/v1/auth
-
 ### Sign up
 POST http://localhost:3000/v1/auth/sign-up
 Content-Type: application/json
@@ -15,6 +12,6 @@ POST http://localhost:3000/v1/auth/sign-in
 Content-Type: application/json
 
 {
-    "username": "testupdate",
+    "username": "test",
     "password": "test"
 }

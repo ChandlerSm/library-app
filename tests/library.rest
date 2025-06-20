@@ -1,2 +1,36 @@
 ### basic get all items in library
 GET http://localhost:3000/v1/library
+
+### Get Item by ID
+GET http://localhost:3000/v1/library/1
+
+### Get user's items
+GET http://localhost:3000/v1/library/user/1
+
+### Create an item
+POST http://localhost:3000/v1/library/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6MSwiaWF0IjoxNzUwMzgzMDI2fQ.wYmoeYqnQaXMc7N5-YQCsH1soQ8GWTLeawWm4L3yPm0
+
+{
+    "name": "test name",
+    "description": "test description",
+    "imageURL": "test image URL",
+    "rating": 3
+}
+
+### Delete an item
+DELETE http://localhost:3000/v1/library/1/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6MSwiaWF0IjoxNzUwMzgzMDI2fQ.wYmoeYqnQaXMc7N5-YQCsH1soQ8GWTLeawWm4L3yPm0
+
+### Update an item
+PUT http://localhost:3000/v1/library/1/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6MSwiaWF0IjoxNzUwMzgzMDI2fQ.wYmoeYqnQaXMc7N5-YQCsH1soQ8GWTLeawWm4L3yPm0
+
+{
+    "name": "test name update",
+    "description": "test description update",
+    "imageURL": "test image URL update",
+    "rating": 2
+}

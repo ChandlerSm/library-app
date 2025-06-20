@@ -11,11 +11,6 @@ userRouter.get('/', users)
 // Parameters: ID of account to get
 userRouter.get('/:id', authorization, getUser);
 
-// Will create a new user, more for dev purposes not user use
-userRouter.post('/', (req, res) => {
-    console.log("Created a user")
-})
-
 // Will update an account
 // Parameters: ID of account to update
 userRouter.put('/:id/:username', authorization, updateUser)

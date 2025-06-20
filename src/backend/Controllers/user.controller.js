@@ -1,5 +1,6 @@
 import db from '../db.js'
 
+// Get all users
 export const users = async (req, res, next) => {
     try {
         db.all("SELECT * FROM users", (err, row) => {
@@ -12,6 +13,9 @@ export const users = async (req, res, next) => {
     }
 }
 
+// Get a specific user
+// Parameters:
+// id: user id
 export const getUser = async (req, res) => {
  try {
     db.all("SELECT username, role, id FROM users WHERE id = ?", [req.params.id], (err, row) => {
@@ -23,6 +27,9 @@ export const getUser = async (req, res) => {
  }
 }
 
+// Delete a user from the database
+// Parameter:
+// userId: id of the user
 export const deleteUser = async (req, res) => {
     try {
         const userId = req.params.id
@@ -35,6 +42,11 @@ export const deleteUser = async (req, res) => {
     }
 }
 
+
+// Update a user's info, just username for now
+// Parameter:
+// id: ID of the user
+// username: Text to update username to
 export const updateUser = async (req, res) => {
     try {
         const { id, username } = req.params
