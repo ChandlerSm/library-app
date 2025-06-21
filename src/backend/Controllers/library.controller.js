@@ -18,6 +18,7 @@ export default class libraryController {
     getItemById = async (req, res) => {
         try {
             const {id} = req.params
+            if (!id) return res.status(401).json({message: "Missing id"})
             db.all("SELECT * FROM library WHERE id = ?", [id], (err, row) => {
                 if (err) return res.status(404).json({message: "Item not found."})
                 if (!row) return res.status(400).json({message: "Item is empty."})
