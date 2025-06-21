@@ -4,7 +4,7 @@
   "description": "A personal library to keep track of things like movies, books, music, etc.",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles --forceExit",
     "start": "node ./src/backend/app.js",
     "dev": "nodemon ./src/backend/app.js"
   },
