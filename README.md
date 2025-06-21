@@ -30,7 +30,7 @@ A RESTful backend API built with Node.js and Express to manage a personal librar
 - npm start
 
 ### What you need to start
-- env
-- PORT (specified port to run on)
-- JWTSECRETTOKEN
-- testtoken (for running jest tests, requires you to log into an account and get token)
+- env:
+  - PORT (specified port to run on)
+  - JWTSECRETTOKEN
+  - testtoken (for running jest tests, requires you to log into an account and get token)
